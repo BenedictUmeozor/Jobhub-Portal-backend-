@@ -20,10 +20,6 @@ const getAllJobs = expressAsyncHandler(async (req, res) => {
 const getSingleJob = expressAsyncHandler(async (req, res) => {
   const { id } = req.params;
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new Error("Job does not exist");
-  }
-
   const job = await Job.findOne({ _id: id });
 
   if (!job) {
