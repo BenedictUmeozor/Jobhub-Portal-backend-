@@ -13,8 +13,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://jobhub-portal-frontend.vercel.app/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: 'https://jobhub-portal-frontend.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
 );
